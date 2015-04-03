@@ -12,6 +12,7 @@ module AssetSync
     end
 
     def connection
+      puts self.config.fog_options.inspect
       @connection ||= Fog::Storage.new(self.config.fog_options)
     end
 
